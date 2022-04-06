@@ -60,7 +60,7 @@ void myDisplay()
     glBegin(GL_POLYGON);
     glNormal3f(-0.707, 0.707, 0); glVertex3f(0, 0, 0); glVertex3f(1, 0, 0); glVertex3f(0.5, 0.5, 0.5);
     glEnd();
-    //// грань f3
+    // грань f3
     glBegin(GL_POLYGON);
     glNormal3f(0.707, 0.707, 0); glVertex3f(1, 0, 0); glVertex3f(1, 0, 1); glVertex3f(0.5, 0.5, 0.5);
     glEnd();
@@ -94,7 +94,6 @@ void myReshape(int width, int height)
 void myIdle()
 {
     angle += plusangle; if (angle > 360.0) angle = 0;
-    angle2 += plusangle2; if (angle2 > 360.0) angle2 = 0;
     glutPostRedisplay();
 }
 
@@ -113,7 +112,7 @@ int main(int argc, char* argv[])
     glutInitDisplayMode(GLUT_RGBA | GLUT_DOUBLE | GLUT_DEPTH); //устанавливая режим дисплея в функции main( ), предусмотрено использование буфера глубины
     glutInitWindowSize(800, 800);
     glutInitWindowPosition(0, 0);
-    glutCreateWindow("Задание 2, 4 лабораторная работа.");
+    glutCreateWindow("Задание 2, 5 лабораторная работа.");
     glutDisplayFunc(myDisplay);
     glutKeyboardFunc(keys);
     glutReshapeFunc(myReshape);
